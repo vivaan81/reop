@@ -13,10 +13,10 @@ class Car:
         print("Price:", self.__price)
 
     def get_price(self):
-    return self.__price
+        return self.__price
 
     def set_price(self, price):
-    self.__price = price
+        self.__price = price
     
 class ElectricCar(Car):
     def __init__(self, make, model, price, battery_range):
@@ -38,4 +38,10 @@ class SportsCar(Car):
 
 
 car1 = Car("Toyota", "Corolla", 1000000)
-car1.get_info()
+electric1 = ElectricCar("Tesla", "Model 3", 4500000, 300.0)
+sports1 = SportsCar("Ferrari", "488", 50000000, 330.0)
+
+cars = [car1, electric1, sports1]
+for car in cars:
+    car.get_info()
+    print()
