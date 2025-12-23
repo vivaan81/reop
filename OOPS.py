@@ -18,6 +18,23 @@ class Car:
     def set_price(self, price):
     self.__price = price
     
+class ElectricCar(Car):
+    def __init__(self, make, model, price, battery_range):
+        super().__init__(make, model, price)
+        self.battery_range = battery_range
+
+    def get_info(self):
+        super().get_info()
+        print("Battery Range:", self.battery_range)
+
+class SportsCar(Car):
+    def __init__(self, make, model, price, top_speed):
+        super().__init__(make, model, price)
+        self.top_speed = top_speed
+
+    def get_info(self):
+        super().get_info()
+        print("Top Speed:", self.top_speed)
 
 
 car1 = Car("Toyota", "Corolla", 1000000)
